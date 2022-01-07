@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashFID" prefHeight="886.0" prefWidth="1513.0" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="109.0" prefWidth="1513.0" style="-fx-background-color: linear-gradient(to right top, #44006a, #4b3292, #4d58b9, #4e7ddd, #52a3ff);">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="GG" layoutX="24.0" layoutY="83.0" size="80" text="" />
+            <Label layoutX="129.0" layoutY="22.0" text="DashBoard" textFill="WHITE">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="1352.0" layoutY="28.0" onAction="#logOutAction" prefHeight="54.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-color: #fb0000; fx-border-color: transparent; -fx-border-color: #fff; -fx-border-width: 3 3 3 3;" text="LOGOUT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="27" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator layoutX="374.0" layoutY="54.0" prefHeight="23.0" prefWidth="966.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="107.0" prefHeight="780.0" prefWidth="354.0" style="-fx-background-color: #0091d0;">
+         <children>
+            <VBox layoutX="20.0" layoutY="177.0" prefHeight="544.0" prefWidth="314.0" style="-fx-background-color: #006da4;">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#customerOnAction" prefHeight="98.0" prefWidth="321.0" style="-fx-border-color: #fff; -fx-border-width: 3 3 1.5 3;" styleClass="sidebarItem" text="  Customers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="28" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#itemsOnAction" prefHeight="98.0" prefWidth="319.0" style="-fx-border-color: #fff; -fx-border-width: 3 3 1.5 3;" styleClass="sidebarItem" text="  Items List" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CUBES" size="28" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#incomeReportOnAction" prefHeight="98.0" prefWidth="329.0" style="-fx-border-color: #fff; -fx-border-width: 3 3 1.5 3;" styleClass="sidebarItem" text="  Income Reports" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="28" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#itemReportOnAction" prefHeight="98.0" prefWidth="328.0" style="-fx-border-color: #fff; -fx-border-width: 3 3 1.5 3;" styleClass="sidebarItem" text="  Item Reports" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="28" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#placeOderOnAction" prefHeight="95.0" prefWidth="320.0" style="-fx-border-color: #fff; -fx-border-width: 3 3 1.5 3;" styleClass="sidebarItem" text="  Make Payments" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="28" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#manageOrdersOnAction" prefHeight="95.0" prefWidth="320.0" style="-fx-border-color: #fff; -fx-border-width: 3 3 1.5 3;" styleClass="sidebarItem" text="  Manage Orders" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" size="28" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#orderDetailsOnAction" prefHeight="96.0" prefWidth="328.0" style="-fx-border-color: #fff; -fx-border-width: 3 3 3 3;" styleClass="sidebarItem" text="  Order Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST_ALT" size="28" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <GridPane layoutX="19.0" layoutY="34.0" prefHeight="109.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #fff; -fx-background-color: #006da4;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="122.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="178.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="40.0" prefWidth="172.0" text="   Name  :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRole" prefHeight="40.0" prefWidth="172.0" text="Administrator" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUserName" prefHeight="40.0" prefWidth="172.0" text="chamath" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="172.0" text="   Role    :" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="Dash2FID" layoutX="354.0" layoutY="106.0" prefHeight="783.0" prefWidth="1159.0">
+         <children>
+            <GridPane hgap="25.0" layoutX="84.0" layoutY="270.0" prefHeight="453.0" prefWidth="994.0" vgap="25.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#itemReportOnAction" prefHeight="203.0" prefWidth="316.0" style="-fx-border-width: 3; -fx-border-color: #002cbf;" styleClass="sidebar" text="Item Reports" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#002cbf" glyphName="BAR_CHART" size="45" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#customerOnAction" prefHeight="193.0" prefWidth="340.0" style="-fx-border-width: 3; -fx-border-color: #002cbf;" styleClass="sidebar" text="Customers">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#002cbf" glyphName="USERS" size="45" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#itemsOnAction" prefHeight="193.0" prefWidth="340.0" style="-fx-border-width: 3; -fx-border-color: #002cbf;" styleClass="sidebar" text="Items List" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#002cbf" glyphName="CUBES" size="45" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#placeOderOnAction" prefHeight="204.0" prefWidth="315.0" style="-fx-border-width: 3; -fx-border-color: #002cbf;" styleClass="sidebar" text="Place Customer Order" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#002cbf" glyphName="MONEY" size="45" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#orderDetailsOnAction" prefHeight="203.0" prefWidth="315.0" style="-fx-border-width: 3; -fx-border-color: #002cbf;" styleClass="sidebar" text="Oder Details" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#002cbf" glyphName="LIST_ALT" size="45" text="" />
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageOrdersOnAction" prefHeight="203.0" prefWidth="316.0" style="-fx-border-width: 3; -fx-border-color: #002cbf;" styleClass="sidebar" text="Manage Orders" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#002cbf" glyphName="DATABASE" size="45" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+            <AnchorPane fx:id="p3" layoutX="785.0" layoutY="90.0" prefHeight="122.0" prefWidth="293.0" style="-fx-background-color: #cc00ad;" styleClass="tiles">
+               <children>
+                  <AnchorPane prefHeight="122.0" prefWidth="80.0" style="-fx-background-color: #a10088;" styleClass="tiles">
+                     <children>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CALENDAR_CLOCK" layoutX="16.0" layoutY="75.0" size="40" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="p3shadow" layoutX="80.0" prefHeight="122.0" prefWidth="1.0" style="-fx-background-color: #ea6012;" />
+                  <Label fx:id="lblDate" layoutX="100.0" layoutY="13.0" text="13/10/2021" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="102.0" layoutY="58.0" text="23:37:41" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="p2" layoutX="424.0" layoutY="90.0" prefHeight="122.0" prefWidth="314.0" style="-fx-background-color: #00a1f1;" styleClass="tiles">
+               <children>
+                  <AnchorPane prefHeight="122.0" prefWidth="80.0" style="-fx-background-color: #007abb;" styleClass="tiles">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" layoutX="16.0" layoutY="75.0" size="40" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="p2shadow" layoutX="80.0" prefHeight="100.0" prefWidth="1.0" style="-fx-background-color: #00abc5;" />
+                  <Label layoutX="100.0" layoutY="20.0" text="Total Sale Today" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSale" layoutX="100.0" layoutY="50.0" prefHeight="49.0" prefWidth="209.0" text="Rs: 5000000" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="p1" layoutX="84.0" layoutY="90.0" prefHeight="122.0" prefWidth="293.0" style="-fx-background-color: #9b00fb;" styleClass="tiles">
+               <children>
+                  <AnchorPane prefHeight="122.0" prefWidth="80.0" style="-fx-background-color: #6300a1;" styleClass="tiles">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TASKS" layoutX="16.0" layoutY="71.0" size="40" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="100.0" layoutY="21.0" text="Total Orders Today" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrder" layoutX="100.0" layoutY="51.0" text="000" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

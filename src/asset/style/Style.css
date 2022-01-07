@@ -1,0 +1,61 @@
+.sidebarItem:hover{
+    -fx-background-color:  #00a1f1;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.sidebar:hover{
+    -fx-background-color:  #c3dde7;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.tblCustomer {
+    -fx-background-radius:14 14 0 0;
+    -fx-border-color: #1168c5;
+    -fx-border-radius:  15 15 0 0;
+    -fx-border-width:  2;
+}
+
+.tblCustomerColumn {
+    -fx-alignment: center;
+}
+
+.tblCustomer .column-header-background{
+    -fx-background-color: #1168c5;
+    -fx-background-radius:14 14 0 0;
+}
+
+.tblCustomer .column-header, .table-view .filler{
+    -fx-size:45px;
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color:transparent;
+}
+
+.tblCustomer .column-header .label {
+    -fx-text-fill: white ;
+}
+
+.tiles{
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0,0.15), 6.0, 0.7, 0.0,1);
+}
+
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-width: 2;
+    -fx-border-radius: 8px;
+}
+.textField{
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #726d6d;
+}
+.textLabel{
+    -fx-background-color: white;
+    -fx-padding: 0 5px 0px 5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(76, 73, 73, 0.83);;
+}
+

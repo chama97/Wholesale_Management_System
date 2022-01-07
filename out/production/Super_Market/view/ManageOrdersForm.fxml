@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageOrder" prefHeight="783.0" prefWidth="1159.0" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageOrdersFormController">
+   <children>
+      <FontAwesomeIconView fill="#ee0000" glyphName="CLOSE" layoutX="1102.0" layoutY="58.0" onMouseClicked="#closeWindowOnAction" size="45" text="" />
+      <Label layoutX="394.0" layoutY="33.0" prefHeight="68.0" prefWidth="357.0" style="-fx-border-color: #009a1c; -fx-border-width: 2 2 2 2;" text="   Manage Orders" textFill="#009a1c">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrders" layoutX="30.0" layoutY="261.0" prefHeight="484.0" prefWidth="1099.0" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="155.0" styleClass="tblCustomerColumn" text="Order Id" />
+            <TableColumn fx:id="colCstId" prefWidth="183.0" styleClass="tblCustomerColumn" text="Customer Id" />
+            <TableColumn fx:id="colDate" prefWidth="248.0" styleClass="tblCustomerColumn" text="Order Date" />
+            <TableColumn fx:id="colTime" prefWidth="258.0" styleClass="tblCustomerColumn" text="Order Time" />
+            <TableColumn fx:id="colCost" prefWidth="254.0" styleClass="tblCustomerColumn" text="Cost" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="30.0" layoutY="189.0" onAction="#UpdateOrderOnAction" prefHeight="49.0" prefWidth="138.0" style="-fx-background-color: #4b51ff; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="21" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="191.0" layoutY="189.0" onAction="#deleteOrderOnAction" prefHeight="49.0" prefWidth="138.0" style="-fx-background-color: #ff3f3f; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="21" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

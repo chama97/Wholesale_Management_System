@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeOrder" prefHeight="783.0" prefWidth="1159.0" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceCustomerOrderFormController">
+   <children>
+      <FontAwesomeIconView fill="#ee0000" glyphName="CLOSE" layoutX="1094.0" layoutY="56.0" onMouseClicked="#closeWindowOnAction" size="45" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Label layoutX="345.0" layoutY="32.0" prefHeight="60.0" prefWidth="446.0" style="-fx-border-color: #009a1c; -fx-border-width: 2 2 2 2;" text="  Place Customer Order" textFill="#009a1c">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCart" layoutX="33.0" layoutY="467.0" prefHeight="225.0" prefWidth="1094.0" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colCode" prefWidth="127.0" styleClass="tblCustomerColumn" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="266.0" styleClass="tblCustomerColumn" text="Description" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="230.0" styleClass="tblCustomerColumn" text="Unit Price" />
+            <TableColumn fx:id="colQty" prefWidth="127.0" styleClass="tblCustomerColumn" text="Qty" />
+            <TableColumn fx:id="colTotal" prefWidth="235.0" styleClass="tblCustomerColumn" text="Total" />
+            <TableColumn fx:id="colDelete" prefWidth="106.0" styleClass="tblCustomerColumn" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddCart" buttonType="RAISED" layoutX="970.0" layoutY="332.0" onAction="#addToCartOnAction" prefHeight="40.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #00bf0f; -fx-border-color: #fff; fx-border-color: transparent; -fx-border-width: 2 2 2 2;" text=" Add To Cart" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="23" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="970.0" layoutY="399.0" onAction="#clearOnAction" prefHeight="40.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #ff2929; -fx-border-color: #fff; fx-border-color: transparent; -fx-border-width: 2 2 2 2;" text="  Clear" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BITBUCKET" size="21" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPlace" buttonType="RAISED" layoutX="975.0" layoutY="710.0" onAction="#placeOrderOnAction" prefHeight="40.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #009a1c; -fx-border-color: #fff; fx-border-color: transparent; -fx-border-width: 2 2 2 2;" text=" Place Order" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="22" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="33.0" layoutY="137.0" prefHeight="79.0" prefWidth="280.0" style="-fx-background-color: #01bfdb;" styleClass="tiles">
+         <children>
+            <AnchorPane prefHeight="90.0" prefWidth="80.0" style="-fx-background-color: #008fa4;" styleClass="tiles">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARCODE" layoutX="20.0" layoutY="62.0" size="40" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="132.0" layoutY="14.0" text="Order Id :" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrderId" layoutX="126.0" layoutY="44.0" text="O-0001" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="33.0" layoutY="242.0" prefHeight="90.0" prefWidth="280.0" style="-fx-background-color: #EE712B;" styleClass="tiles">
+         <children>
+            <AnchorPane prefHeight="90.0" prefWidth="80.0" style="-fx-background-color: #DC4712;" styleClass="tiles">
+               <children>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CALENDAR_CLOCK" layoutX="16.0" layoutY="65.0" size="40" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="lblDate" layoutX="100.0" layoutY="10.0" text="13/02/2018" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="118.0" layoutY="48.0" text="23:37:41" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="33.0" layoutY="346.0" prefHeight="90.0" prefWidth="280.0" style="-fx-background-color: #e8165e;" styleClass="tiles">
+         <children>
+            <AnchorPane prefHeight="90.0" prefWidth="80.0" style="-fx-background-color: #bf124d;" styleClass="tiles">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MONEY" layoutX="20.0" layoutY="61.0" size="40" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="92.0" layoutY="18.0" text="Total Price With Discount" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalIncome" layoutX="100.0" layoutY="39.0" prefHeight="45.0" prefWidth="166.0" text="Rs: 1000.0" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="662.0" layoutY="140.0" prefHeight="299.0" prefWidth="280.0" spacing="20.0" style="-fx-border-width: 3; -fx-border-color: #1837a7;">
+         <children>
+            <ComboBox fx:id="cmbItemIds" prefHeight="31.0" prefWidth="275.0" promptText="Item Code">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <TextField fx:id="txtDescription" prefHeight="31.0" prefWidth="183.0" promptText="Description" style="-fx-border-color: #800089;" />
+            <TextField fx:id="txtQtyOnHand" prefHeight="31.0" prefWidth="139.0" promptText="qty On Hand" style="-fx-border-color: #800089;" />
+            <TextField fx:id="txtUnitPrice" prefHeight="31.0" prefWidth="156.0" promptText="Unit Price" style="-fx-border-color: #800089;" />
+            <TextField fx:id="txtQty" prefHeight="35.0" prefWidth="140.0" promptText="Enter QTY" style="-fx-border-color: #800089; -fx-border-width: 2 2 2 2;">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="355.0" layoutY="140.0" prefHeight="299.0" prefWidth="280.0" spacing="20.0" style="-fx-border-width: 3; -fx-border-color: #1837a7;">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <ComboBox fx:id="cmbCustomerIds" prefHeight="31.0" prefWidth="252.0" promptText="Customer Id">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <TextField fx:id="txtName" prefHeight="33.0" prefWidth="220.0" promptText="Customer Name" style="-fx-border-color: #800089;" />
+            <TextField fx:id="txtAddress" prefHeight="33.0" prefWidth="220.0" promptText="Customer Address" style="-fx-border-color: #800089;" />
+            <TextField fx:id="txtPostalCode" prefHeight="33.0" prefWidth="220.0" promptText="Customer Postal Code" style="-fx-border-color: #800089;" />
+            <TextField fx:id="txtProvince" prefHeight="33.0" prefWidth="220.0" promptText="Customer Province" style="-fx-border-color: #800089;" />
+         </children>
+      </VBox>
+      <FontAwesomeIconView fill="#00b23b" glyphName="PRINT" layoutX="1031.0" layoutY="55.0" onMouseClicked="#printOnAction" size="40" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+   </children>
+</AnchorPane>

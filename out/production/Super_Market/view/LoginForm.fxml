@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminLogin" prefHeight="646.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Pane layoutX="476.0" prefHeight="646.0" prefWidth="476.0">
+         <children>
+            <Label layoutX="132.0" layoutY="68.0" text="Admin Login" textFill="#0087d0">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#0083c9" glyphName="USER" layoutX="78.0" layoutY="323.0" size="25" text="" />
+            <FontAwesomeIconView fill="#004bee" glyphName="KEY" layoutX="76.0" layoutY="387.0" size="24" text="" />
+            <FontAwesomeIconView fill="#007ec2" glyphName="USERS" layoutX="195.0" layoutY="218.0" size="65" text="" />
+            <JFXButton buttonType="RAISED" layoutX="154.0" layoutY="454.0" onAction="#dashboardOnAction" prefHeight="51.0" prefWidth="152.0" ripplerFill="BLACK" style="-fx-background-color: #007ec2; fx-border-color: transparent; -fx-border-color: #fff; -fx-border-width: 3 3 3 3;" text=" LOGIN" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="KEY" size="25" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <VBox alignment="CENTER" layoutX="93.0" layoutY="266.0" prefHeight="158.0" prefWidth="325.0" spacing="40.0">
+               <children>
+                  <JFXTextField fx:id="txtUserName" focusColor="#006ab1" labelFloat="true" onAction="#UserAction" prefHeight="52.0" prefWidth="540.0" promptText="Enter Username" style="-fx-prompt-text-fill: #004c75; -fx-text-inner-color: #1e2b3c;" unFocusColor="#0078b9">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtPassword" focusColor="#006ab1" labelFloat="true" prefHeight="50.0" prefWidth="540.0" promptText="Enter Password" style="-fx-prompt-text-fill: #004c75; -fx-text-inner-color: #1e2b3c;" unFocusColor="#0078b9">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXPasswordField>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <Label fx:id="lblWrong" layoutX="115.0" layoutY="414.0" prefHeight="21.0" prefWidth="251.0" textFill="#e10000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="119.0" layoutY="531.0" prefHeight="81.0" prefWidth="222.0">
+               <children>
+                  <JFXButton text="Forgot your password?" textFill="#1600b9" underline="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane prefHeight="646.0" prefWidth="476.0" style="-fx-background-color: linear-gradient(to right top, #44006a, #4b3292, #4d58b9, #4e7ddd, #52a3ff);">
+         <children>
+            <Label layoutX="115.0" layoutY="363.0" lineSpacing="10.0" prefHeight="59.0" prefWidth="263.0" text="WHOLESALE&#10;&#10;&#10;" textFill="WHITE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <Pane layoutX="84.0" layoutY="58.0" prefHeight="68.0" prefWidth="325.0" style="-fx-background-color: #150993;">
+               <children>
+                  <Pane layoutX="4.0" layoutY="5.0" prefHeight="59.0" prefWidth="318.0" style="-fx-background-color: #009ff5;">
+                     <children>
+                        <Label layoutX="45.0" layoutY="-4.0" prefHeight="68.0" prefWidth="240.0" text="WB Wholesale" textFill="#150993">
+                           <font>
+                              <Font name="Brush Script MT Italic" size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label layoutX="96.0" layoutY="425.0" lineSpacing="10.0" prefHeight="59.0" prefWidth="302.0" text="Management System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="UNIVERSITY" layoutX="181.0" layoutY="289.0" size="100" />
+            <Label layoutX="92.0" layoutY="538.0" lineSpacing="10.0" prefHeight="25.0" prefWidth="310.0" text="N0 200, Galle road Rawatawatta Moratuwa." textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="172.0" layoutY="569.0" lineSpacing="10.0" prefHeight="25.0" prefWidth="132.0" text="Tel : 033- 2345678" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

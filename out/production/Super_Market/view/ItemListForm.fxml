@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="itemsList" prefHeight="783.0" prefWidth="1159.0" style="-fx-background-color: #fff;" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemListFormController">
+   <children>
+      <Label layoutX="416.0" layoutY="34.0" prefHeight="66.0" prefWidth="297.0" style="-fx-border-color: #009a1c; -fx-border-width: 2 2 2 2;" text="     Items List" textFill="#009a1c">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#ee0000" glyphName="CLOSE" layoutX="1102.0" layoutY="50.0" onMouseClicked="#closeWindowOnAction" size="45" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <TableView fx:id="tblItemList" layoutX="37.0" layoutY="355.0" prefHeight="393.0" prefWidth="1089.0" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="195.0" styleClass="tblCustomerColumn" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="346.0" styleClass="tblCustomerColumn" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="243.0" styleClass="tblCustomerColumn" text="Qty On Hand" />
+            <TableColumn fx:id="colPrice" prefWidth="304.0" styleClass="tblCustomerColumn" text="Unit Price" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="667.0" layoutY="282.0" onAction="#deleteItemsOnAction" prefHeight="47.0" prefWidth="138.0" style="-fx-background-color: #ee0000; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BITBUCKET" size="20" text="" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="822.0" layoutY="282.0" onAction="#ItemsUpdateOnAction" prefHeight="47.0" prefWidth="138.0" style="-fx-background-color: #553eff; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="981.0" layoutY="282.0" onAction="#addItemOnAction" prefHeight="47.0" prefWidth="138.0" style="-fx-background-color: #0fb800; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20" />
+         </graphic>
+      </JFXButton>
+      <HBox layoutX="37.0" layoutY="202.0" prefHeight="42.0" prefWidth="1089.0" spacing="20.0">
+         <children>
+            <AnchorPane prefHeight="42.0" prefWidth="200.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtItemCode" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="186.0" promptText="I-001" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Item Code" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="43.0" prefWidth="381.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtDescription" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="331.0" promptText="Computer" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Description" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="42.0" prefWidth="195.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtQty" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="186.0" promptText="10" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Qty On Hand" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="43.0" prefWidth="224.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtUnitPrice" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="216.0" promptText="100000.00" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Unit Price" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerDetail" prefHeight="783.0" prefWidth="1159.0" style="-fx-background-color: #fff;" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <Label layoutX="384.0" layoutY="40.0" prefHeight="68.0" prefWidth="368.0" style="-fx-border-color: #009a1c; -fx-border-width: 2 2 2 2;" text="  Customer Details" textFill="#009a1c">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCstDetail" layoutX="36.0" layoutY="374.0" prefHeight="360.0" prefWidth="1083.0" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="122.99996948242188" styleClass="tblCustomerColumn" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="231.0" styleClass="tblCustomerColumn" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="273.0" styleClass="tblCustomerColumn" text="Address" />
+            <TableColumn fx:id="colProvince" prefWidth="257.0" styleClass="tblCustomerColumn" text="Province" />
+            <TableColumn fx:id="colCode" prefWidth="196.0" styleClass="tblCustomerColumn" text="Postal Code" />
+         </columns>
+      </TableView>
+      <FontAwesomeIconView fill="#ee0000" glyphName="CLOSE" layoutX="1104.0" layoutY="55.0" onMouseClicked="#closeWindowOnAction" size="45" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="981.0" layoutY="299.0" onAction="#addCustomerOnAction" prefHeight="49.0" prefWidth="138.0" style="-fx-background-color: #00c237; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20" text="" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="674.0" layoutY="299.0" onAction="#deleteCustomerOnAction" prefHeight="49.0" prefWidth="138.0" style="-fx-background-color: #ff3f3f; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="21" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="831.0" layoutY="300.0" onAction="#UpdateCustomerOnAction" prefHeight="47.0" prefWidth="138.0" style="-fx-background-color: #553eff; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+         </graphic>
+      </JFXButton>
+      <HBox layoutX="35.0" layoutY="194.0" prefHeight="42.0" prefWidth="1089.0" spacing="20.0">
+         <children>
+            <AnchorPane prefHeight="43.0" prefWidth="148.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtId" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="138.0" promptText="C-001" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Id" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="43.0" prefWidth="224.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtName" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="203.0" promptText="Nimal" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Name" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="42.0" prefWidth="195.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtAddress" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="186.0" promptText="Colombo" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Address" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="43.0" prefWidth="224.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtProvince" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="177.0" promptText="Western" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Province" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="43.0" prefWidth="198.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtPostalCode" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="177.0" promptText="21939" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Postal Code" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <TextField fx:id="txtSearch" layoutX="35.0" layoutY="302.0" prefHeight="43.0" prefWidth="353.0" promptText="Search Filter" style="-fx-border-color: #553eff; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-width: 3; -fx-background-color: #e0eeff;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

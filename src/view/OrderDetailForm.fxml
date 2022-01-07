@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderDetail" prefHeight="783.0" prefWidth="1159.0" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailFormController">
+   <children>
+      <Label layoutX="401.0" layoutY="34.0" prefHeight="68.0" prefWidth="338.0" style="-fx-border-color: #009a1c; -fx-border-width: 2 2 2 2;" text="    Order Details" textFill="#009a1c">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrderDetail" layoutX="39.0" layoutY="197.0" prefHeight="533.0" prefWidth="1085.0" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colItemCod" prefWidth="196.0" styleClass="tblCustomerColumn" text="Item Code" />
+            <TableColumn fx:id="colOrderId" prefWidth="261.0" styleClass="tblCustomerColumn" text="Order Id" />
+            <TableColumn fx:id="colQty" prefWidth="303.0" styleClass="tblCustomerColumn" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="324.0" styleClass="tblCustomerColumn" text="Unit Price" />
+         </columns>
+      </TableView>
+      <FontAwesomeIconView fill="#ee0000" glyphName="CLOSE" layoutX="1097.0" layoutY="61.0" onMouseClicked="#closeWindowOnAction" size="45" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+   </children>
+</AnchorPane>

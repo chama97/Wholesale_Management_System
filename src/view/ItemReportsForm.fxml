@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="itemReports" prefHeight="783.0" prefWidth="1159.0" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemReportsFormController">
+   <children>
+      <Label layoutX="415.0" layoutY="31.0" prefHeight="66.0" prefWidth="305.0" style="-fx-border-color: #009a1c; -fx-border-width: 2 2 2 2;" text="    Item reports" textFill="#009a1c">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#ee0000" glyphName="CLOSE" layoutX="1098.0" layoutY="55.0" onMouseClicked="#closeWindowOnAction" size="45" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <TableView fx:id="tblItemReports" layoutX="32.0" layoutY="331.0" prefHeight="402.0" prefWidth="1099.0" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="295.0" styleClass="tblCustomerColumn" text="Item Code" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="454.0" styleClass="tblCustomerColumn" text="Unit Price" />
+            <TableColumn fx:id="colQtySell" prefWidth="349.0" styleClass="tblCustomerColumn" text="Qty For Sell" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="32.0" layoutY="179.0" prefHeight="109.0" prefWidth="293.0" style="-fx-background-color: #00bf13;" styleClass="tiles">
+         <children>
+            <AnchorPane prefHeight="112.0" prefWidth="80.0" style="-fx-background-color: #007c0e;" styleClass="tiles">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_UP" layoutX="16.0" layoutY="75.0" size="45" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="80.0" prefHeight="100.0" prefWidth="1.0" style="-fx-background-color: #00abc5;" />
+            <Label layoutX="100.0" layoutY="20.0" text="Most movable Item :" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mostItem" layoutX="100.0" layoutY="50.0" prefHeight="47.0" prefWidth="181.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="361.0" layoutY="179.0" prefHeight="112.0" prefWidth="293.0" style="-fx-background-color: #ff3b3b;" styleClass="tiles">
+         <children>
+            <AnchorPane prefHeight="112.0" prefWidth="80.0" style="-fx-background-color: #da0000;" styleClass="tiles">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_DOWN" layoutX="16.0" layoutY="71.0" size="45" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="100.0" layoutY="20.0" text="Least movable Item :" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="leastItem" layoutX="100.0" layoutY="49.0" prefHeight="47.0" prefWidth="175.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIconView fill="#00b503" glyphName="PRINT" layoutX="1036.0" layoutY="55.0" onMouseClicked="#printItemOnAction" size="40" />
+   </children>
+</AnchorPane>

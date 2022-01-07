@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="incomeReport" prefHeight="783.0" prefWidth="1159.0" stylesheets="@../asset/style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeReportsFormController">
+   <children>
+      <Label layoutX="383.0" layoutY="43.0" prefHeight="66.0" prefWidth="346.0" style="-fx-border-color: #009a1c; -fx-border-width: 2 2 2 2;" text="  Income Reports" textFill="#009a1c">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#ee0000" glyphName="CLOSE" layoutX="1096.0" layoutY="58.0" onMouseClicked="#closeWindowOnAction" size="45" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <TableView fx:id="tblIncomeReport" layoutX="32.0" layoutY="164.0" prefHeight="501.0" prefWidth="1099.0" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colCstId" prefWidth="251.0" styleClass="tblCustomerColumn" text="Customer Id" />
+            <TableColumn fx:id="colOdId" prefWidth="230.0" styleClass="tblCustomerColumn" text="Order Id" />
+            <TableColumn fx:id="colOdDate" prefWidth="303.0" styleClass="tblCustomerColumn" text="Order Date" />
+            <TableColumn fx:id="colCstIncome" prefWidth="314.0" styleClass="tblCustomerColumn" text="Customer Wise Income" />
+         </columns>
+      </TableView>
+      <HBox layoutX="32.0" layoutY="698.0" prefHeight="46.0" prefWidth="338.0" spacing="5.0">
+         <children>
+            <Label text="Total Income : " textFill="#1f00ab">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalIncome" text="Rs: 100000.0" textFill="#1400cd">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <FontAwesomeIconView fill="#00b503" glyphName="PRINT" layoutX="1034.0" layoutY="57.0" onMouseClicked="#printItemOnAction" size="40" />
+   </children>
+</AnchorPane>
